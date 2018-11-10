@@ -1,0 +1,13 @@
+ <div class="contents row">
+
+<%= form_with url: blogs_path do |form| %>
+    <h4>
+      投稿する
+    </h4>
+  NAME<%= form.text_field :name %>
+  TEXT<%= form.text_field :text %>
+  <%= submit_tag %>
+<% end %>
+
+
+</div>

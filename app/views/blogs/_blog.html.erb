@@ -1,0 +1,16 @@
+
+    <div class="card">
+      <div class="card-content">
+        <p><%= simple_format(blog.text) %></p>
+        <br><br>
+        <% if user_signed_in? && current_user.id == blog.user_id %>
+
+        <a class="waves-effect waves-light btn" <%= link_to '編集', "/blogs/#{blog.id}/edit", method: :get %></a>
+        <a class="waves-effect waves-light btn" <%= link_to '削除', "/blogs/#{blog.id}", method: :delete %></a>
+        <% end %>
+      </div>
+      <div class="card-action">
+        <span class="name">NAME : <%= blog.name %></span>
+      </div>
+      </div>
+

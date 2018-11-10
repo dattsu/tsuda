@@ -1,0 +1,15 @@
+<div class="row">
+  <h4><%= @name %>さんの投稿一覧</h4>
+  <% @blog.each do |blog| %>
+
+<div class="col s12 m7 blogpost">
+
+<%= render partial: "blogs/blog", locals: { blog: blog } %>
+
+</div>
+  <% end %>
+
+</div>
+
+  <%= paginate(@blog) %>
+
